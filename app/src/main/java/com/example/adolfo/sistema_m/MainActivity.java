@@ -67,7 +67,7 @@ ImageView image;
         insertar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                dispatchTakePictureIntent();
+                insertar();
             }
         });
         ver_tabla.setOnClickListener(new View.OnClickListener(){
@@ -246,7 +246,7 @@ ImageView image;
     }
 
     public void ver_tabla(){
-        Intent i=new Intent(MainActivity.this,viewpageractivity.class);
+        Intent i=new Intent(MainActivity.this,grafica.class);
         startActivity(i);
     }
     public void extraer(){

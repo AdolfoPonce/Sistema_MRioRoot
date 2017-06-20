@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 public class launcher extends AppCompatActivity{
-    public int DURACION_SPLASH =3000;
+    public int DURACION_SPLASH =4000;
     @Override
             public void onCreate(Bundle b){
         super.onCreate(b);

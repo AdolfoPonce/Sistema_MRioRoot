@@ -41,7 +41,7 @@ public class servicio extends Service {
                         .setContentInfo("4")
                         .setTicker("Alerta!");
         PendingIntent pi=PendingIntent.getActivity(this,0,new Intent(this,grafica.class),0);
-        mBuilder.setVibrate(vibrar);
+       /* mBuilder.setVibrate(vibrar); */
         mBuilder.setLights(0xff00ff00,300,1000);
         mBuilder.setContentIntent(pi);
 

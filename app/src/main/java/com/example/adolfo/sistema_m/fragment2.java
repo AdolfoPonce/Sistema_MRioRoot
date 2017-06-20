@@ -14,6 +14,7 @@ public class fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater i, ViewGroup v, Bundle s){
         ViewGroup root=(ViewGroup)i.inflate(R.layout.fragment2,v,false);
+
         return  root;
 
     }
