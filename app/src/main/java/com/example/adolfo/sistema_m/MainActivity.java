@@ -67,7 +67,8 @@ ImageView image;
         insertar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                insertar();
+              Intent i=new Intent(MainActivity.this,tabviewPagerAdapterActivity.class);
+                startActivity(i);
             }
         });
         ver_tabla.setOnClickListener(new View.OnClickListener(){
@@ -246,7 +247,7 @@ ImageView image;
     }
 
     public void ver_tabla(){
-        Intent i=new Intent(MainActivity.this,grafica.class);
+        Intent i=new Intent(MainActivity.this,lista.class);
         startActivity(i);
     }
     public void extraer(){
@@ -265,16 +266,17 @@ ImageView image;
     }
 
     public void insertar(){
-        data_base db=new data_base(MainActivity.this,"tienda",null,1);
+        data_base db=new data_base(MainActivity.this,"lista",null,1);
         String lb= label.getText().toString();
-        float gan=(Float.parseFloat(ganancia.getText().toString()));
+        String gan=ganancia.getText().toString();
         SQLiteDatabase sld=db.getWritableDatabase();
         if(db!=null){
             System.out.println("Se inserto correctamente");
             ContentValues valores=new ContentValues();
-            valores.put("ganancia",gan);
-            valores.put("dia",lb);
+            valores.put("titulo",gan);
+            valores.put("asunto",lb);
             sld.insert("tienda",null,valores);
         }db.close();
+
     }
 }

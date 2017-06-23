@@ -19,6 +19,8 @@
         <activity android:name=".grafica"></activity>
         <activity android:name=".viewpageractivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".tabviewPagerAdapterActivity">
+        </activity>
         <service android:name=".servicio"></service>
         <uses-feature android:name="android.hardware.camera" android:required="true" />
         <provider

@@ -40,7 +40,7 @@ public class servicio extends Service {
                         .setContentText("Ejemplo de notificación.")
                         .setContentInfo("4")
                         .setTicker("Alerta!");
-        PendingIntent pi=PendingIntent.getActivity(this,0,new Intent(this,grafica.class),0);
+        PendingIntent pi=PendingIntent.getActivity(this,0,new Intent(this,lista.class),0);
        /* mBuilder.setVibrate(vibrar); */
         mBuilder.setLights(0xff00ff00,300,1000);
         mBuilder.setContentIntent(pi);

@@ -13,7 +13,9 @@ import android.widget.Toast;
  */
 
 public class data_base extends SQLiteOpenHelper {
-   public  String sql="CREATE TABLE tienda (codigo INTEGER,ganancia INTEGER,dia TEXT);";
+
+   public  String sql="CREATE TABLE tienda(titulo TEXT,asunto TEXT);";
+
 
     public data_base(Context c, String name, SQLiteDatabase.CursorFactory cf, int version){
         super(c,name,cf,version);
@@ -22,7 +24,7 @@ public class data_base extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE tienda (codigo INT,ganancia DOUBLE,dia TEXT);");
+        db.execSQL("CREATE TABLE tienda (titulo TEXT,asunto TEXT);");
         System.out.println("Se creo la base");
     }
 
